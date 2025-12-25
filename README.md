@@ -1,5 +1,9 @@
 # SCELLIDOC API - Backend Django
 
+![CI](https://github.com/Gali14591/IDORA/actions/workflows/ci.yml/badge.svg)
+
+**Note:** The CI workflow runs Django migrations and tests from the repository root using `python manage.py`.
+
 ## Structure du projet
 
 ```

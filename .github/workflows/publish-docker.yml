@@ -3,6 +3,12 @@ name: Publish Docker image
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to publish (e.g. v0.1.1)'
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -37,5 +43,5 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/idora:latest
-            ghcr.io/${{ github.repository_owner }}/idora:${{ github.ref_name }}
+            ghcr.io/${{ github.repository_owner }}/idora:${{ github.event.release.tag_name || github.event.inputs.tag || github.ref_name }}
           platforms: linux/amd64,linux/arm64

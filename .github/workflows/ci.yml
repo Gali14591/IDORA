@@ -26,10 +26,8 @@ jobs:
 
       - name: Run migrations
         run: |
-          cd scellidoc_api
           python manage.py migrate --noinput
 
       - name: Run tests
         run: |
-          cd scellidoc_api
           python manage.py test --verbosity 2

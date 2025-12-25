@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.log
+
+# Virtual environment
+venv/
+.env
+
+# Django
+db.sqlite3
+/staticfiles/
+/media/
+
+# IDEs
+.vscode/
+.idea/
+
+# Installer files
+python-installer.exe
